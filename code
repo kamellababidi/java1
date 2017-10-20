@@ -1,0 +1,61 @@
+// MyClass 
+import java.util.Scanner;
+public class MyClass {
+
+    public void printMsg(String str){
+        System.out.println(str);
+    }
+    public void guessMyNumber (int num){
+        int randomNum = 1 + (int)(Math.random() * 10);
+        System.out.println(randomNum);
+        if(num==randomNum){
+            System.out.println("Congratulation!! You win!!");
+            return;
+        }else{
+            System.out.println("try again");
+        }
+    }
+    public int [] acceptAndReverse(){
+        Scanner reader = new Scanner(System.in);
+        int [] arr=new int [5];
+        for(int i=0;i<5;i++) {
+            System.out.println("enter number");
+            int num = reader.nextInt();
+            arr[i]=num;
+        }
+        return arr;
+    }
+}
+
+//main class
+
+import java.util.Scanner;
+public class main {
+    public static void main (String [] args) {
+        System.out.println("hellghghgho world");
+        MyClass kamel = new MyClass();
+        kamel.printMsg("hello");
+        Scanner reader = new Scanner(System.in);
+        //this is for guess my number
+//        for(int i=0;i<3;i++){
+//            System.out.println("enter number between 1 and 10");
+//            int num=reader.nextInt();
+//            kamel.guessMyNumber(num);
+//        }
+        //System.out.println("game over");
+
+
+
+        //this is for array
+        int [] result=new int[5];
+        result=kamel.acceptAndReverse();
+        for(int i=4;i>=0;i--){
+            System.out.print(result[i]);
+        }
+
+
+    }
+}
+
+
+
